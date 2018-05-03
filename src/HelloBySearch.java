@@ -3,19 +3,20 @@ import java.lang.String;
 
 public class HelloBySearch {
     public static void main (String[] args) {
-        String hello = "hello Java";
+        String hello = "Hello Java!";
 
         for(int i = 0; i < hello.length(); i++) {
             char rand = ' ';
+
             while(rand != hello.charAt(i)) {
                 System.out.print(rand);
                 try {
-                    Thread.sleep(5);
+                    Thread.sleep(10);
                 } catch(InterruptedException ex) {
                     Thread.currentThread().interrupt();
                 }
                 System.out.print("\b");
-                rand = (char)('A' + new Random().nextInt(126));
+                rand = (char)('!' + new Random().nextInt(90));
             }
             System.out.print(rand);
         }
